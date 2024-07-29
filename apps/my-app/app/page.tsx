@@ -1,12 +1,14 @@
-import { Button } from "@/components/ui/button";
-import { ModeToggle } from "@/components/ui/toggle";
+import Chatbox from "@/components/home/chatbox";
+import Navbar from "@/components/home/navbar";
+import TemplateQuestionCard from "@/components/home/template-question-card";
+import TemplateQuestion from "@/components/home/template-questions";
 
 export default function Home() {
   return (
-    <main>
-      <h1 className="underline">Hello World</h1>
-      <Button>Click</Button>
-      <ModeToggle />
-    </main>
+    <div className="flex flex-col items-center">
+      <Navbar />
+      <TemplateQuestion />
+      <Chatbox />
+    </div>
   );
 }

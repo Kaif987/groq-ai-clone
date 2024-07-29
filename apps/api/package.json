@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "yarn gen:supabase:types && tsc --declaration --outDir dist/",
-    "dev": "tsx --experimental-wasm-modules -r dotenv/config src/server.ts dotenv_config_path=.env",
+    "dev": "tsx --experimental-wasm-modules -r dotenv/config src/test.ts dotenv_config_path=.env",
     "start:dist": "yarn build && node -r dotenv/config dist/server.js",
     "lint": "eslint src",
     "lint:fix": "yarn lint --fix",
@@ -22,6 +22,7 @@
   "license": "MIT",
   "dependencies": {
     "@repo/ui": "*",
+    "@repo/db": "*",
     "@langchain/groq": "^0.0.15",
     "@supabase/supabase-js": "^2.38.4",
     "axios": "^1.6.1",

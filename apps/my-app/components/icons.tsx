@@ -22,13 +22,18 @@ import {
     Trash,
     Twitter,
     User,
+    SendHorizonal,
     X,
     type Icon as LucideIcon,
+    GraduationCap,
+    ShoppingBag,
+    Lightbulb,
+    SquareTerminal,
 } from "lucide-react"
 
 
 export const Icons = {
-    logo: Command,
+    logo: ({ ...props }) => (<Command {...props} />),
     close: X,
     spinner: Loader2,
     chevronLeft: ChevronLeft,
@@ -49,6 +54,13 @@ export const Icons = {
     sun: SunMedium,
     moon: Moon,
     laptop: Laptop,
+    cap: GraduationCap,
+    shoppingBag: ShoppingBag,
+    bulb: Lightbulb,
+    terminal: SquareTerminal,
+    send: ({ ...props }: LucideProps) => (
+        <SendHorizonal {...props} />
+    ),
     gitHub: ({ ...props }: LucideProps) => (
         <svg
             aria-hidden="true"
@@ -72,3 +84,5 @@ export const Icons = {
     twitter: Twitter,
     check: Check,
 }
+
+export type KeyOfIcons = keyof typeof Icons

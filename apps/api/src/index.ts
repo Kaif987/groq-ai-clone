@@ -1,10 +1,11 @@
-import { ChatGroq } from "@langchain/groq";
 import { prisma } from "@repo/db/client"
 
-const model = new ChatGroq({
-    model: "mixtral-8x7b-32768",
-    temperature: 0,
-});
+// const model = new ChatGroq({
+//     model: "mixtral-8x7b-32768",
+//     temperature: 0,
+// });
+
+// const prisma = new PrismaClient()
 
 const user = await prisma.user.create({
     data: {
@@ -15,6 +16,8 @@ const user = await prisma.user.create({
     },
 })
 
-const response = await model.invoke("hello ")
+console.log(user)
 
-console.log(response)
+// const response = await model.invoke("hello ")
+
+// console.log(response)
